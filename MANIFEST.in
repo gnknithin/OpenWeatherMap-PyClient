@@ -1,0 +1,9 @@
+include LICENSE
+include pyproject.toml
+include *.md
+include setup.py
+recursive-include src *.py
+
+exclude .coveragerc
+exclude Makefile
+recursive-exclude tests *.py
