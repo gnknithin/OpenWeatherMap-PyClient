@@ -32,7 +32,7 @@ setup(
         "requests",
         "python-dotenv",
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.7",
     extras_require={
         "tests": [
             "pytest",
