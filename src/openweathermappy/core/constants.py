@@ -3,7 +3,7 @@ class ClientEnvironmentVariable:
 
 
 class ErrorMessage:
-    INITIALIZATION_FAILURE = f"{ClientEnvironmentVariable.OPENWEATHERMAP_API_KEY} environment variable not found, iniialization failure!"
+    INITIALIZATION_FAILURE = f"{ClientEnvironmentVariable.OPENWEATHERMAP_API_KEY} environment variable not found, initialization failure!"
 
 
 class ParameterConstants:
