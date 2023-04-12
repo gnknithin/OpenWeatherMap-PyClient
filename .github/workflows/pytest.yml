@@ -23,5 +23,5 @@ jobs:
         run: pip install pytest pytest-cov pytest-dotenv pytest-xdist
       - name: Running tests with Code Coverage
         env:
-          OPENWEATHERMAP_API_KEY: ${{ secret.OPENWEATHERMAP_API_KEY }}
+          OPENWEATHERMAP_API_KEY: ${{ secrets.OPENWEATHERMAP_API_KEY }}
         run: pytest -vv --cov --cov-report=term-missing
