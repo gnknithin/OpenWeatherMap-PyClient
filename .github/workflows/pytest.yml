@@ -24,4 +24,19 @@ jobs:
       - name: Running tests with Code Coverage
         env:
           OPENWEATHERMAP_API_KEY: ${{ secrets.OPENWEATHERMAP_API_KEY }}
-        run: pytest -vv --cov --cov-report=term-missing
+        run: pytest -vv --junitxml=coverage.xml --cov --cov-report=term-missing
+      - name: Coveralls
+        uses: AndreMiras/coveralls-python-action@develop
+        with:
+          parallel: true
+          flag-name: Running tests with Code Coverage
+  coveralls_finish:
+    needs: run_pytest
+    runs-on: ubuntu-latest
+    steps:
+      - name: Coveralls Finished
+        uses: AndreMiras/coveralls-python-action@develop
+        with:
+          parallel-finished: true
+          github-token: ${{ secrets.COVERALLS_REPO_TOKEN }}
+          path-to-lcov: coverage.xml

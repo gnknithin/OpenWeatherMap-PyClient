@@ -11,6 +11,7 @@ omit =
 source=
     src
     tests
+relative_files = True
 [report]
 show_missing = true
 precision = 2
