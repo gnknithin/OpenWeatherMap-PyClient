@@ -1,3 +1,4 @@
+[![Coverage Status](https://coveralls.io/repos/github/gnknithin/OpenWeatherMap-PyClient/badge.svg?branch=main)](https://coveralls.io/github/gnknithin/OpenWeatherMap-PyClient?branch=main)
 # OpenWeatherMap-PyClient
 A simple wrapper around OpenWeatherMap APIs using Python
 
