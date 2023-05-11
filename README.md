@@ -23,6 +23,24 @@ For UNIX or LINUX or MAC users, add the line to ``~/.bashrc`` or ``~/.zshrc`` us
     
     export OPENWEATHERMAP_API_KEY=YOUR-OPENWEATHERMAP-API-KEY
 
+## Usage/Examples
+
+```python
+from openweathermappy.client import OpenWeatherMapClient
+
+<!-- To Load from .env -->
+client = OpenWeatherMapClient.loadFromDotEnvFile()
+
+
+<!-- To Initialize with OpenWeatherMap API Key -->
+client = OpenWeatherMapClient(apiKey='YOUR-API-KEY')
+
+<!-- To Get Name Of Location Using Latitude and Longitude  -->
+response = client.getNameOfLocationUsingLatitudeAndLongitude(latitude=17.69,longitude=83.2093)
+print(response)
+
+```
+
 
 Project Links
 =============
