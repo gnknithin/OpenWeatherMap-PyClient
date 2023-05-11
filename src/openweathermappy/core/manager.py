@@ -3,7 +3,8 @@ from typing import Any, Dict, List, Optional
 
 import requests
 
-from .constants import GeocodingAPI, OpenWeatherMapURL, ParameterConstants
+from ._url import GeocodingAPI, OpenWeatherMapURL
+from .constants import ParameterConstants
 
 
 class BaseManager(ABC):

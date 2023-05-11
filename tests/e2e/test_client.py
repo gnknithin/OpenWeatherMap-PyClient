@@ -1,11 +1,15 @@
 from typing import Dict, List
 
 from openweathermappy.client import OpenWeatherMapClient
+
 from tests.base_tests import BaseE2ETest
 
 
 class TestE2EOpenWeatherMapClient(BaseE2ETest):
-    def test_getNameOfLocationUsingLatitudeAndLongitude(self, clientFromDotEnv: OpenWeatherMapClient):
+    def test_getNameOfLocationUsingLatitudeAndLongitude(
+            self,
+            clientFromDotEnv: OpenWeatherMapClient
+        ):
         # Arrange
         # Act
         sut = clientFromDotEnv.getNameOfLocationUsingLatitudeAndLongitude(
