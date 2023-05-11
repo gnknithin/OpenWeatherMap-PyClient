@@ -1,13 +1,17 @@
-check-coverage:
+pytest-coverage:
 	pytest -vv --cov --cov-report=term-missing
+pytest-collect:
+	pytest --collect-only
 check-build:
 	python3 setup.py bdist_wheel sdist
 check-bdist:
 	python3 setup.py bdist_wheel
 check-sdist:
 	python3 setup.py sdist
-check-flake8:
-	flake8 --exclude=.venv --ignore=E501
+ruff:
+	ruff check .
+ruff-fix:
+	ruff check --fix .
 venv-remove:
 	rm -rf .venv
 venv-deactivate:
