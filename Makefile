@@ -9,7 +9,7 @@ check-bdist:
 check-sdist:
 	python3 setup.py sdist
 mypy:
-	mypy src/ tests/
+	mypy .
 ruff:
 	ruff check .
 ruff-fix:
