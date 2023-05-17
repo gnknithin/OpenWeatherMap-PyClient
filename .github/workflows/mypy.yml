@@ -19,5 +19,7 @@ jobs:
         run: python -m pip install --upgrade pip
       - name: Install MyPy
         run: pip install mypy
+      - name: Install MyPy-Install-Types
+        run: mypy --install-types
       - name: Analysing the code with MyPy
         run: mypy .
