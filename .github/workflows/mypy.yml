@@ -17,9 +17,7 @@ jobs:
         run: python -c "import sys; print(sys.version)"
       - name: Updrade Pip
         run: python -m pip install --upgrade pip
-      - name: Install MyPy
-        run: pip install mypy
-      - name: Install MyPy-Install-Types
-        run: mypy --install-types
+      - name: Install types-requests, python-dotenv, MyPy Pytest
+        run: pip install types-requests python-dotenv mypy pytest
       - name: Analysing the code with MyPy
         run: mypy .
