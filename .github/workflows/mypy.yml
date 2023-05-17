@@ -20,4 +20,4 @@ jobs:
       - name: Install MyPy
         run: pip install mypy
       - name: Analysing the code with MyPy
-        run: mypy scr/ tests/
+        run: mypy src/ tests/
