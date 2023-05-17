@@ -8,6 +8,8 @@ check-bdist:
 	python3 setup.py bdist_wheel
 check-sdist:
 	python3 setup.py sdist
+mypy:
+	mypy src/ tests/
 ruff:
 	ruff check .
 ruff-fix:
