@@ -31,6 +31,7 @@ setup(
     packages=find_packages(where="src", exclude=["tests"]),
     install_requires=[
         "requests",
+        "types-requests",
         "python-dotenv",
     ],
     python_requires=">=3.7",
