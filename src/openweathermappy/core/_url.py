@@ -15,6 +15,7 @@ class SubResource:
     ZIP = "zip"
     REVERSE = "reverse"
     WEATHER = "weather"
+    ONECALL = "onecall"
 
 class OpenWeatherMapURL:
 
@@ -37,6 +38,18 @@ class OpenWeatherMapURL:
             Versions.VERSION_2_5,
             "/",
             SubResource.WEATHER
+        ]
+    )
+
+    ONECALL_3_0_URL = "".join(
+        [
+            Resource.BASE_URL,
+            "/",
+            Resource.DATA_TYPE,
+            "/",
+            Versions.VERSION_3_0,
+            "/",
+            SubResource.ONECALL
         ]
     )
 

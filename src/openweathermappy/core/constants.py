@@ -22,3 +22,4 @@ class ParameterConstants:
     UNITS = "units"
     LANG = "lang"
     ID = "id"
+    EXCLUDE="exclude"

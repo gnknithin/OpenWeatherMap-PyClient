@@ -25,7 +25,6 @@ log_cli_format = "%(asctime)s %(levelname)s %(message)s"
 log_cli_level = "info"
 log_date_format = "%Y-%m-%d %H:%M:%S"
 addopts =[
-    "-nauto",
     "-ra",
     "-q",
     "--strict-markers",
@@ -51,7 +50,6 @@ pythonpath = [
 ]
 required_plugins = [
     "pytest-cov",
-    "pytest-xdist",
     "pytest-dotenv"
 ]
 testpaths=[
