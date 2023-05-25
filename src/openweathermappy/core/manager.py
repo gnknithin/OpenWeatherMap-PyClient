@@ -20,6 +20,21 @@ class BaseManager(ABC):
 class ContextManager(BaseManager):
     def __init__(self, api_key: str) -> None:
         super().__init__(api_key)
+    
+    def fetchOneCallAPI(
+            self,
+            lat: float,
+            lon: float,
+            exclude:List[str]
+        ):
+        _prepared_params = self._prepare_request_params()
+        _prepared_params[ParameterConstants.LAT] = lat
+        _prepared_params[ParameterConstants.LON] = lon
+        _prepared_params[ParameterConstants.EXCLUDE] = exclude
+        return requests.get(
+            url=OpenWeatherMapURL.ONECALL_3_0_URL,
+            params=_prepared_params
+        )
 
     def fetchLocation(
         self,

@@ -25,6 +25,18 @@ class OpenWeatherMapClient:
         dotenv.load_dotenv(dotenv_path=dotenv.find_dotenv())
         return OpenWeatherMapClient.loadFromEnvironmentVariable()
 
+    def getWeatherUsingOneCallAPI(
+            self,
+            latitude: float,
+            longitude: float,
+            exclude:List[str]
+        ):
+        return self._context.fetchOneCallAPI(
+            lat=latitude,
+            lon=longitude,
+            exclude=exclude
+        ).json()
+
     def getNameOfLocationUsingLatitudeAndLongitude(
         self,
         latitude: float,

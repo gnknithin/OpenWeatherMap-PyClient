@@ -14,6 +14,7 @@ ruff:
 	ruff check .
 ruff-fix:
 	ruff check --fix .
+pre-push: mypy ruff
 venv-remove:
 	rm -rf .venv
 venv-deactivate:
