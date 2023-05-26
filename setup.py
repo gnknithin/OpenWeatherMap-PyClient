@@ -38,7 +38,6 @@ setup(
         "tests": [
             "pytest",
             "pytest-cov",
-            "pytest-xdist",
             "pytest-dotenv"
         ],
     },
