@@ -8,7 +8,7 @@ python:
 install:
   - pip install --upgrade pip
   - pip install .
-  - pip install pytest pytest-cov pytest-dotenv pytest-xdist
+  - pip install pytest pytest-cov pytest-dotenv
 script:
   - export OPENWEATHERMAP_API_KEY
   - pytest -vv --cov --cov-report=term-missing
